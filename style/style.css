@@ -1,49 +1,101 @@
-div{
-  background-color: red;
-  color: white;
+/* this is some magical font-importing.  
+you'll learn about it later. */
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+
+body {
+  margin: 0;
+  background: #eee;
+  font-family: Besley, serif;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+}
+
+.profile-image {
+  background: rebeccapurple;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+  border-radius: 50%;
+  width: 48px;
+  height:  48px;
+}
+
+.logo {
+  color: rebeccapurple;
   font-size: 32px;
-  text-align: center;
-  font-weight: bold;
-}
-*{
-  border: 2px solid red;
+  font-weight: 900;
+  font-style: italic;
 }
 
-.image1{
-  background-color:yellow;
-  width: 200PX;
-  height: 150px;
+button {
+  border: none;
+  border-radius: 8px;
+  background: rebeccapurple;
+  color: white;
+  padding: 8px 24px;
 }
 
-.one{
-  background-color: yellow;
-  border: white;
-  padding: 32px;
-  margin: 12px;
-  text-shadow: thistle;
-  color: black;
-  padding-bottom: auto;
-  margin-bottom: auto;
+a {
+  /* this removes the line under our links */
+  text-decoration: none;
+  color: rebeccapurple;
 }
 
-.two{
-  background: lightblue;
-  border: 3px solid blue;
-  margin-bottom: auto;
+ul {
+  list-style-type: none;
 }
 
-.three{
-  background: peachpuff;
-  border: 3px solid brown;
-  width: 200px;
-  padding: 32px;
-  margin-left: auto;
+/* SOLUTION */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }
 
-.four{
-  background: burlywood;
-  border: chartreuse;
-  width: auto;
-  padding: 32px;
-  margin-left: auto;
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
 }
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.title {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.info {
+  max-width: 200px;
+}
+
